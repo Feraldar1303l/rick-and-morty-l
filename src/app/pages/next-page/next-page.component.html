@@ -1,0 +1,113 @@
+<div class="jumbotron" style="
+background-image: url(https://images3.alphacoders.com/812/812062.png); 
+background-position: 0% 80%; 
+background-size: cover;
+background-repeat: no-repeat;
+opacity: 0.95;
+">
+    <div class="container">
+      <h1 class="display-3" style="font-size: 80px; color:azure">Rick & Morty</h1>
+      <p style="color: azure;">Rick Sánchez es un "científico loco". Es alcohólico, un genio, irresponsable, un poco depresivo, egoísta y está loco. Rick acaba de mudarse a casa de su hija Beth y allí recuerda que tiene un nieto llamado Morty. Sin preguntar a nadie, decide que le va a obligar a acompañarle a todo tipo de aventuras para que el chico se vuelva inteligente como él y no se convierta en un idiota como Jerry, padre de Morty y yerno de Rick. Así, Rick y Morty comienzan a vivir aventuras intergalácticas gracias a su pistola de portales con la que puede acceder a infinitas dimensiones, a pesar de que la familia no quiere que lo sigan haciendo. Poco a poco tienen que intentar encontrar un equilibrio entre su vida familiar y sus viajes a través del espacio y por distintas realidades paralelas, algo que no es fácil para el pequeño Morty que es incapaz de tener una vida normal al margen de su abuelo.</p>
+    </div>
+  </div>
+
+<div class="container">
+
+  <div class="card flex-md-row mb-4 box-shadow h-md-250" *ngFor="let character of characters">
+    <h5 class="card-header"><img class="card-img-left flex-auto d-none d-md-block" src="{{character.image}}" alt="Card image cap"></h5>
+    <div class="card-body d-flex flex-column align-items-start">
+      <strong *ngIf="character.status === 'Alive'" class="d-inline-block mb-2 text-success">Alive</strong>
+      <strong *ngIf="character.status === 'Dead'" class="d-inline-block mb-2 text-warning">Dead</strong>
+      <strong *ngIf="character.status === 'unknown'" class="d-inline-block mb-2 text-muted">Unknown</strong>
+      <h3 class="mb-0">
+        <a class="text-dark">{{character.name}}</a>
+      </h3>
+      <p class="card-text mb-auto"><a style="font-weight: bold; font-size: large;">Especie: </a><a>{{character.species}}</a></p>
+      <a [routerLink]="['/about/', character.id]" class="btn btn-primary">Ver más</a>
+    </div>
+  </div> 
+  
+  <div class="card" style="align-items: center;">
+    <div class="card-body" style="align-items: center;">
+
+      <div class="row">
+        <div class="col-sm-6">
+      <div class="media-body pb-3 mb-0 small lh-125">
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <button class="btn btn-primary"><a href="javascript: history.go(-1)" style="color:azure;">Pagina anterior</a></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="media-body pb-3 mb-0 small lh-125">
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <button class="btn btn-primary"><a [routerLink]="['/page/',3]"  style="color:azure;">Pagina siguiente</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    </div>
+  </div>
+  
+  <div class="card text-center">
+    <div class="card-header">
+      <ul class="nav nav-pills card-header-pills">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/page/',1]" onclick="location.reload">Pag. 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/page/',2]">Pag. 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/page/',3]">Pag. 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/page/',4]">Pag. 4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/page/',5]">Pag. 5</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/page/',6]">Pag. 6</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/page/',7]">Pag. 7</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/page/',8]">Pag. 8</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/page/',9]">Pag. 9</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/page/',10]">Pag. 10</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/page/',11]">Pag. 11</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/page/',12]">Pag. 12</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/page/',13]">Pag. 13</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/page/',14]">Pag. 14</a>
+        </li>
+    </ul>
+    </div>
+  </div>
+
+
+    <hr>
+
+    <h3>Wubalubadubdub!!</h3>
+    <p></p>
+    <div class="row">
+      <div class="col-12 col-sm-6 col-lg-8"></div>
+    </div>
+    
+
+  </div> 
